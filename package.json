@@ -1,0 +1,15 @@
+{
+  "name": "web-types-playground",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:gaetanmaisse/web-types-playground.git",
+  "author": "Gaëtan Maisse <gaetanmaisse@gmail.com>",
+  "license": "MIT",
+  "web-types": [
+    "./web-types/gravitee--ui-components-web-types.json",
+    "./web-types/lit-web-types.json"
+  ],
+  "dependencies": {
+    "lit": "^2.1.1"
+  }
+}

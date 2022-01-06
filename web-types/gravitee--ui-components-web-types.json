@@ -1,0 +1,76 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JetBrains/web-types/master/v2-preview/web-types.json",
+  "name": "@gravitee/ui-components",
+  "version": "1.0.0",
+  "js-types-syntax": "typescript",
+  "description-markup": "markdown",
+  "default-icon": "../icons/gravitee--ui-components.svg",
+  "contributions": {
+    "html": {
+      "elements": [
+        {
+          "name": "gv-icon",
+          "description": "A simple icon component",
+          "source": {
+            "file": "./src/atoms/gv-icon.js",
+            "offset": 0
+          },
+          "priority": "highest",
+          "css": {
+            "classes": [
+              {
+                "name": "large",
+                "description": "Set the icon to 64x64px"
+              }
+            ],
+            "properties": [
+              {
+                "name": "--gv-icon--c",
+                "description": "Color"
+              },
+              {
+                "name": "--gv-icon-opacity--c",
+                "description": "Opacity (between 0 and 1)"
+              }
+            ]
+          },
+          "attributes": [
+            {
+              "name": "shape",
+              "description": "A concatenation of category name and icon name: `{category}:{iconName}`",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "required": true
+            }
+          ]
+        },
+        {
+          "name": "gv-button",
+          "description": "A custom button component.",
+          "priority": "normal",
+          "attributes": [
+            {
+              "name": "type",
+              "description": "The type of the button",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "primary"
+            },
+            {
+              "name": "size",
+              "value": {
+                "kind": "expression",
+                "type": "enum"
+              },
+              "default": "medium"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
