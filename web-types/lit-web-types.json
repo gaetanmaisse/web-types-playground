@@ -26,6 +26,7 @@
         {
           "name": "Event listeners",
           "description": "Event listeners expression",
+          "virtual": true,
           "doc-url": "https://lit.dev/docs/templates/expressions/#event-listener-expressions",
           "value": {
             "kind": "expression",
@@ -36,20 +37,23 @@
             "template": [
               "@",
               "#item:event name"
-            ],
-            "required": true
+            ]
           }
         },
         {
           "name": "Boolean Attributes",
           "description": "Boolean Attributes expression",
+          "virtual": true,
           "doc-url": "https://lit.dev/docs/templates/expressions/#boolean-attribute-expressions",
           "value": {
             "kind": "expression",
             "type": "boolean"
           },
           "pattern": {
-            "items": "/html/attributes",
+            "items": {
+              "path": "/html/attributes",
+              "includeVirtual": false
+            },
             "template": [
               "?",
               "#item:attribute name"
@@ -59,13 +63,17 @@
         {
           "name": "Properties",
           "description": "Properties expression",
+          "virtual": true,
           "doc-url": "https://lit.dev/docs/templates/expressions/#property-expressions",
           "value": {
             "kind": "expression",
             "type": "any"
           },
           "pattern": {
-            "items": "/html/attributes",
+            "items": {
+              "path": "/html/attributes",
+              "includeVirtual": false
+            },
             "template": [
               ".",
               "#item:property name"
