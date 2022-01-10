@@ -1,0 +1,78 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JetBrains/web-types/master/v2-preview/web-types.json",
+  "name": "font-awesome",
+  "default-icon": "../icons/font-awesome.png",
+  "js-types-syntax": "typescript",
+  "version": "1.0.0",
+  "contributions": {
+    "html": {
+      "elements": [
+        {
+          "extends": "i",
+          "name": "i",
+          "description": "FontAwesome icon",
+          "css": {
+            "classes": [
+              {
+                "pattern": {
+                  "items": "css/fa-icon-types",
+                  "template": [
+                    "fa",
+                    "#item:icon type"
+                  ]
+                },
+                "required": true
+              },
+              {
+                "pattern": {
+                  "items": "css/fa-icons",
+                  "template": [
+                    "fa-",
+                    "$...",
+                    "#item:icon"
+                  ]
+                }
+              }
+            ],
+            "fa-icon-types": [
+              {
+                "name": "s",
+                "description": "FontAwesome Solid icon"
+              },
+              {
+                "name": "r",
+                "description": "FontAwesome Regular icon"
+              },
+              {
+                "name": "d",
+                "description": "FontAwesome Duatone icon"
+              }
+            ],
+            "fa-icons": [
+              {
+                "name": "arrow-right",
+                "description": "Right Arrow",
+                "icon": "./icons/fa/arrow-right-solid.svg"
+              },
+              {
+                "name": "arrow-left",
+                "description": "Left Arrow",
+                "icon": "./icons/fa/arrow-left-solid.svg"
+              },
+              {
+                "name": "arrow-up",
+                "description": "Up Arrow",
+                "icon": "./icons/fa/arrow-up-solid.svg"
+              },
+              {
+                "name": "arrow-down",
+                "description": "Down Arrow",
+                "icon": "./icons/fa/arrow-down-solid.svg"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

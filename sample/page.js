@@ -8,7 +8,8 @@ const element = html`<div>
             @click="${(e) => console.log('simple-greeting clicked', e)}"
             @mouseup="${(event) => console.log('simple-greeting mouseup', event)}"
             ?required="${true}"
-            .title="${title}">
+            .title="${title}"
+    >
     </simple-greeting>
 </div>
 `
