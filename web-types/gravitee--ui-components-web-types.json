@@ -11,10 +11,6 @@
         {
           "name": "gv-icon",
           "description": "A simple icon component",
-          "source": {
-            "file": "./src/atoms/gv-icon.js",
-            "offset": 0
-          },
           "priority": "highest",
           "css": {
             "classes": [
@@ -39,8 +35,21 @@
               "name": "shape",
               "description": "A concatenation of category name and icon name: `{category}:{iconName}`",
               "value": {
-                "kind": "expression",
-                "type": "string"
+                "type": "enum"
+              },
+              "values": {
+                "name": "Shape values",
+                "pattern": {
+                  "template": [
+                    {
+                      "items": "/html/shape-categories"
+                    },
+                    ":",
+                    {
+                      "items": "/html/shape-iconNames"
+                    }
+                  ]
+                }
               },
               "required": true
             }
@@ -63,12 +72,24 @@
             {
               "name": "size",
               "value": {
-                "kind": "expression",
-                "type": "enum"
+                "type": "'large'|'medium'|'small'"
               },
               "default": "medium"
             }
           ]
+        }
+      ],
+      "shape-categories": [
+        {
+          "name": "cat1"
+        }
+      ],
+      "shape-iconNames": [
+        {
+          "name": "iconName1"
+        },
+        {
+          "name": "iconName2"
         }
       ]
     }

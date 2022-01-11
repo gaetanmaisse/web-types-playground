@@ -69,6 +69,7 @@
             "kind": "expression",
             "type": "any"
           },
+          "inject-language": "JavaScript",
           "pattern": {
             "items": {
               "path": "/html/attributes",
