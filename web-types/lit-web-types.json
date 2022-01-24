@@ -1,27 +1,20 @@
 {
   "$schema": "https://raw.githubusercontent.com/JetBrains/web-types/master/v2-preview/web-types.json",
-  "name": "web-types-webcomponent1",
+  "framework": "lit",
+  "name": "lit",
+  "version": "2.1.1",
   "default-icon": "../icons/lit.svg",
   "js-types-syntax": "typescript",
-  "version": "1.0.0",
+  "description-markup": "markdown",
+  "framework-config": {
+    "enable-when": {
+      "node-packages": [
+        "lit"
+      ]
+    }
+  },
   "contributions": {
     "html": {
-      "elements": [
-        {
-          "name": "simple-greeting",
-          "description": "An example component to showcase web-types capabilities with Lit",
-          "attributes": [
-            {
-              "name": "name",
-              "description": "user name",
-              "value": {
-                "type": "string",
-                "required": true
-              }
-            }
-          ]
-        }
-      ],
       "attributes": [
         {
           "name": "Event listeners",
@@ -30,12 +23,14 @@
           "doc-url": "https://lit.dev/docs/templates/expressions/#event-listener-expressions",
           "value": {
             "kind": "expression",
-            "type": "(event: Event) => void"
+            "type": "(event: Event) => void",
+            "required": true
           },
           "pattern": {
             "items": "/js/events",
             "template": [
               "@",
+              "$...",
               "#item:event name"
             ]
           }
@@ -47,7 +42,8 @@
           "doc-url": "https://lit.dev/docs/templates/expressions/#boolean-attribute-expressions",
           "value": {
             "kind": "expression",
-            "type": "boolean"
+            "type": "boolean",
+            "required": true
           },
           "pattern": {
             "items": {
@@ -56,6 +52,7 @@
             },
             "template": [
               "?",
+              "$...",
               "#item:attribute name"
             ]
           }
@@ -67,7 +64,8 @@
           "doc-url": "https://lit.dev/docs/templates/expressions/#property-expressions",
           "value": {
             "kind": "expression",
-            "type": "any"
+            "type": "any",
+            "required": true
           },
           "inject-language": "JavaScript",
           "pattern": {
@@ -77,6 +75,7 @@
             },
             "template": [
               ".",
+              "$...",
               "#item:property name"
             ]
           }
