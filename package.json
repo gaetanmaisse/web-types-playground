@@ -8,7 +8,8 @@
   "web-types": [
     "./web-types/gravitee--ui-components-web-types.json",
     "./web-types/lit-web-types.json",
-    "./web-types/font-awesome-web-types.json"
+    "./web-types/font-awesome-web-types.json",
+    "./web-types/angular-web-types.json"
   ],
   "dependencies": {
     "lit": "^2.1.1"
